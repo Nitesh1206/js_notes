@@ -27,3 +27,18 @@ console.log(typeof amount);  // (typeof number) re-change the typeof of number o
 
 // ***************************  Math  **********************************
 
+console.log(Math.round(4.3)); // round of the value 
+console.log(Math.floor(2.9)) // round of to down value
+console.log(Math.ceil(2.9)) // round of to up value
+
+
+console.log(Math.random() * 10) // when you want to get the random value between a range (here 1 - 10)
+console.log((Math.random() * 10) + 1)  // when you want to avoid the starting value as 0 (add +1)
+
+
+// example
+
+let min = 5
+let max = 10
+
+console.log(Math.floor(Math.random() * (max - min + 1)) + min)
