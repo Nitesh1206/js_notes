@@ -18,3 +18,15 @@ console.log(todayDate.toTimeString());  // (output : 20:11:04 GMT+0000)
 let realDate = new Date(2024, 3, 28)
 console.log(realDate.toDateString()); // (output : Sun Apr 28 2024)
 
+let myTimeStamp = Date.now()
+console.log(myTimeStamp);
+
+console.log(realDate.getDay());
+
+
+let customizeDate = realDate.toLocaleString("default", {
+    weekday : "long",
+    timeZone : "UTC"
+})  
+console.log(customizeDate.weekday);  // toLocaleSting can also be use as object to customize the date
+
