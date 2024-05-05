@@ -6,7 +6,7 @@
 
 
 
-// 1. using object literals
+// 1. using object literals  (non singleton)
 
 const user = {
     name : "Nitesh",
