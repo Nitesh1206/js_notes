@@ -42,3 +42,50 @@ console.log(my_obj_2);  // output : { '5': 'e', '6': 'f', '7': 'g', '8': 'h' }
 // modern way of merge two or more object, the spread way
 const new_obj = {...my_obj, ...my_obj_1}
 console.log("new", new_obj);
+
+
+const users = [
+    {
+        id : 1,
+        name : "nitesh"
+    },
+    {
+        id : 2,
+        name : "vipul"
+    },
+    {
+        id : 3,
+        name : "sunny"
+    }
+]
+
+console.log(users[1].name);
+
+
+console.log(obj);
+// these both method create an array of object keys and values
+console.log(Object.keys(obj));
+console.log(Object.values(obj)); 
+
+console.log(Object.entries(obj));  // output : [ [ 'name', 'nitesh' ], [ 'address', 'jaipur' ], [ 'active', false ] ]
+// this method create an array of multiple arrays, and its elements are every key value pair of object.
+
+
+console.log(obj.hasOwnProperty("address"));  // check whether the property is available or not and result (true/false)
+
+
+// ************ Object Destructuring *************
+
+const course = {
+    courseName : "js notes",
+    fee : 1000,
+    courseInstructor : "Hitesh sir",
+}
+
+// console.log(course.fee); regular method 
+
+const {courseName, fee} = course
+const {courseInstructor : instructor} = course  // you can change the name of the property while destructuring
+
+console.log(fee);
+console.log(instructor);
