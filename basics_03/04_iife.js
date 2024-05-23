@@ -13,3 +13,24 @@
 ( (greeting) => {
     console.log(greeting);
 })("good morning")
+
+
+function one(){
+    console.log("one");
+    two()
+
+    function three(){
+        console.log("three");
+        
+    }
+   
+    
+}
+
+function two(){
+    console.log("two");
+     three()
+}
+
+
+one()
