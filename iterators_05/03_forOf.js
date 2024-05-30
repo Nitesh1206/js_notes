@@ -1,6 +1,6 @@
 // for of loop
 
-// work on iterable 
+// work on iterable => value of iterable array, strings, Map etc
 // ["", "", ""] 
 // [{}, {}, {}]
 
@@ -24,6 +24,7 @@ for (const indian of desihero){
 // Map remember the original insertion order and iterate in sequence/ insertion order
 // Map hold the unique values of keys (a key in map occurs once )
 // key value pair insert using set() method
+// Map object is iterated by key value pair by for..of and return two member array of each iteration
 
 const map = new Map()
 
@@ -37,6 +38,8 @@ console.log(map);
 for (const key of map) {
     console.log(key);
 }
+
+// note : Map is not  iterable by for..in
 
 for (const [key] of map) {
     console.log(key);
@@ -53,5 +56,9 @@ const movies = {
     movie_one : "Marvels",
     movies_two : "DC"
 }
-for (const movie of movies)
-console.log(movie); // output : error (movies is not iterable) bcoz bcoz objects are not iterable by for of 
+// for (const movie of movies){
+//     //console.log(movie); // output : error (movies is not iterable) bcoz objects are not iterable by for of 
+// }
+
+
+// Note : objects are not iterable by default 
