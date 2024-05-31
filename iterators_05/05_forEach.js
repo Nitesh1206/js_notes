@@ -44,3 +44,16 @@ const myLanguage = [
 myLanguage.forEach((item) => {
     console.log(item.extension);
 })
+
+
+// forEach does not return any value 
+// eg.
+
+const superHero = ["ShaktiMan", "Gunior-G", "Krrish"]
+
+const hero = superHero.forEach((item) => {
+    console.log(item);
+    return item //  it does not return value
+})
+
+console.log(hero); // undefined -- bcoz it does not return value
