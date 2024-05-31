@@ -1,25 +1,5 @@
-// filter method
+// map method
 
-const num = [1, 2, 3, 4, 5, 6, 7, 8]
-
-const newNum = num.filter((item) => {
-   return  item > 5
-})
-console.log(newNum);
-
-
-// above task using forEach
-
-const anotherNum = []
-
-num.forEach( (item) => {
-    if(item >= 5){
-        anotherNum.push(item)
-    }
-})
-console.log(anotherNum);
-
-// some more excercise of filter
 const books = [
     { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
     { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
@@ -32,16 +12,13 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-  const publishedBooks = books.filter((bk) => {
-    return bk.publish < 2000 && bk.genre === "Non-Fiction"
-})
-    console.log(publishedBooks);
+  const booksTitle = books.map((item) => item.title )
+  console.log(booksTitle);
 
-    const bookArr = []
-    for (const i of publishedBooks) {
-        if(i.publish <= 1990){
-            bookArr.push(i.publish)
-        }
-    }
 
-    console.log(bookArr);
+  const myNum = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+  const newNum = myNum.map((item) => item / 2)
+                    .map((item) => item + 2)
+                    .filter((item) => item >= 25)
+    console.log(newNum);
