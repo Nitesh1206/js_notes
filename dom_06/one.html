@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <div class="bg-black">
+        <h1 id="title" class="heading">DOM learing on chai aur code <span >testing</span></code></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+</body>
+<script>
+    document.getElementById("title").setAttribute('class', "test") // this will always overwrite the existing value
+    document.getElementById('title').setAttribute('class', 'heading test') // this will add the both class 
+
+    const title = document.getElementById('title')
+    title.style.backgroundColor = "blue"
+    title.style.padding = "5px 8px"
+    title.style.borderRadius = "10px"
+
+    // difference between innerHTML, innerText, textContent
+
+    title.innerHTML // output : 'DOM learing on chai aur code <span>testing</span>'
+    // innerHTML provide value of html inside the html tag
+
+    title.textContent // output : 'DOM learing on chai aur code testing'
+    // innerContent provide the whole content inside the html tag
+
+    title.innerText // output : 'DOM learing on chai aur code'
+    // innerText provide the value which is visible on browser 
+
+// note : innerText and textContent doesn't support the inside html tag but innerHTML support 
+
+</script>
+</html>
